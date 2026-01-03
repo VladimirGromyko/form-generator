@@ -3,10 +3,13 @@ import Home from '@/views/Home.vue'
 import DemoSimple from '@/views/DemoSimple.vue'
 import DemoComplex from '@/views/DemoComplex.vue'
 
+
+const basePath = "/form-generator";
 const routes = [
-  { path: '/', name: 'Home', component: Home },
-  { path: '/simple', name: 'Simple', component: DemoSimple },
-  { path: '/complex', name: 'Complex', component: DemoComplex }
+  { path: "/", name: 'Home', component: Home },
+  { path: `${basePath}`, name: 'Home', component: Home },
+  { path: `${basePath}/simple`, name: 'Simple', component: DemoSimple },
+  { path: `${basePath}/complex`, name: 'Complex', component: DemoComplex }
 ];
 
 const router = createRouter({

@@ -48,7 +48,6 @@ function stringifyValue(value: any): string {
 }
 
 function parseValue(str: string) {
-  debugger
   if (str === '') return null
   if ((str.startsWith('{') && str.endsWith('}')) || (str.startsWith('[') && str.endsWith(']'))) {
     try {

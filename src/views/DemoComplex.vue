@@ -18,10 +18,7 @@
             type='text'
             class='input'
             :value='value'
-            @input='(e) => {
-              const v = (e.target as HTMLInputElement).value;
-              (updateValue ?? update)?.(v);
-            }'
+            @input='(e) => handleInput(e, updateValue, update)'
             placeholder='URL to image'
           />
         </div>
@@ -87,6 +84,12 @@ const initial = {
 
 const form = ref({ ...initial })
 
+const handleInput = (e: InputEvent, updateValue: (value) => void, update: (value) => void) => {
+  const value = (e.target as HTMLInputElement).value;
+  const shouldUpdate = updateValue ?? update;
+  shouldUpdate?.(value);
+}
+
 function handleSave(data: any) {
   store.dispatch('saveForm', { id: Date.now(), data })
   alert('Form saved (check Vuex store).')
@@ -100,7 +103,6 @@ function handleCancel() {
 function submit() {
   handleSave({ ...(form.value) })
 }
-
 </script>
 
 <style scoped lang='scss'>

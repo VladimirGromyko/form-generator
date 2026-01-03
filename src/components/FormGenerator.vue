@@ -85,7 +85,6 @@ const fieldComponents: Record<string, any> = {
 };
 
 function initLocal() {
-  debugger
   const src = props.modelValue || {};
   const fieldNames = new Set<string>();
 

@@ -4,9 +4,9 @@
       <div class="container nav-inner">
         <h1 class="logo">Form Generator</h1>
         <div class="links">
-          <router-link to="/">Home</router-link>
-          <router-link to="/simple">Simple Demo</router-link>
-          <router-link to="/complex">Complex Demo</router-link>
+          <router-link to="/form-generator">Home</router-link>
+          <router-link to="/form-generator/simple">Simple Demo</router-link>
+          <router-link to="/form-generator/complex">Complex Demo</router-link>
         </div>
       </div>
     </nav>

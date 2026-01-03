@@ -17,6 +17,5 @@ export default defineConfig({
       '@': resolve(__dirname, 'src'),
     },
   },
-  // publicPath: '/form-generator/'
   base: '/form-generator/'
 })
